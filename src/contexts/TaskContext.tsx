@@ -32,35 +32,37 @@ export function TaskContextProvider({ children }: TaskContextProps) {
     }, [])
 
     const [tasksArray, setTasksArray] = useState<TaskType[]>([])
-    const [currentTask, setCurrentTask] = useState<TaskType>()
+    const [currentTaskArray, setCurrentTaskArray] = useState<TaskType[]>([])
 
     const addTask = (name: string, description: string) => {
-        const id = Math.floor(Math.random() * 9999)
-        const newTask: TaskType = {
-            name: name,
-            description: description,
-            id: id,
-            isFinished: false
-        }
-        const updatedTasks = [...tasksArray, newTask]
-        setTasksArray(updatedTasks)
-        localStorage.setItem('stored-tasks', JSON.stringify(updatedTasks))
+        if (name && description) {
+            const id = Math.floor(Math.random() * 9999)
+            const newTask: TaskType = {
+                name: name,
+                description: description,
+                id: id,
+                isFinished: false
+            }
+            const updatedTasks = [...tasksArray, newTask]
+            setTasksArray(updatedTasks)
+            localStorage.setItem('stored-tasks', JSON.stringify(updatedTasks))
+        } else alert('Valores não definidos.')
     }
 
     const toggleCheck = (id: number) => {
         setTasksArray(tasks => {
-          return tasks.map(task => {
-            if (task.id === id) {
-              return {
-                ...task,
-                isFinished: !task.isFinished,
-              }
-            }
-            return task
-          })
+            return tasks.map(task => {
+                if (task.id === id) {
+                    return {
+                        ...task,
+                        isFinished: !task.isFinished,
+                    }
+                }
+                return task
+            })
         })
-      };
-    
+    };
+
 
     const removeTask = (id: number) => {
         const updatedTasks = tasksArray.filter(task => task.id !== id)
@@ -70,11 +72,11 @@ export function TaskContextProvider({ children }: TaskContextProps) {
 
     const values = {
         tasksArray,
-        currentTask,
+        currentTaskArray,
         addTask,
         removeTask,
         toggleCheck,
-        setCurrentTask
+        setCurrentTaskArray
     }
 
     return (
