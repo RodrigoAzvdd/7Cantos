@@ -1,4 +1,4 @@
-import { ReactNode, createContext, useEffect, useState } from "react";
+import { ReactNode, createContext, useEffect, useState } from "react"
 
 interface TaskContextProps {
     children: ReactNode
@@ -6,13 +6,12 @@ interface TaskContextProps {
 
 type TaskContextType = {
     tasksArray: TaskType[]
-    currentTask?: TaskType | null
     addTask: (name: string, description: string) => void
     removeTask: (id: number) => void
     toggleCheck: (id: number) => void
 }
 
-type TaskType = {
+export type TaskType = {
     name: string
     description: string
     id: number
@@ -32,7 +31,7 @@ export function TaskContextProvider({ children }: TaskContextProps) {
     }, [])
 
     const [tasksArray, setTasksArray] = useState<TaskType[]>([])
-    const [currentTaskArray, setCurrentTaskArray] = useState<TaskType[]>([])
+    const [filteredTasks, setFilteredTasks] = useState<TaskType[]>([])
 
     const addTask = (name: string, description: string) => {
         if (name && description) {
@@ -61,8 +60,7 @@ export function TaskContextProvider({ children }: TaskContextProps) {
                 return task
             })
         })
-    };
-
+    }
 
     const removeTask = (id: number) => {
         const updatedTasks = tasksArray.filter(task => task.id !== id)
@@ -72,11 +70,11 @@ export function TaskContextProvider({ children }: TaskContextProps) {
 
     const values = {
         tasksArray,
-        currentTaskArray,
+        filteredTasks,
         addTask,
         removeTask,
         toggleCheck,
-        setCurrentTaskArray
+        setFilteredTasks,
     }
 
     return (

@@ -1,0 +1,26 @@
+.btn {
+    padding: .5rem 2rem;
+    font-weight: 600;
+    font-size: 1.1rem;
+    border: 1px solid #000000;
+    background-color: #000;
+    color: #fff;
+    border-radius: .3rem;
+    transition: .3s;
+}
+
+.btn:hover {
+    transform: scale(1.01);
+    box-shadow: 0 5px 10px #8a8a8a;
+    cursor: pointer;
+}
+
+.errorBtn {
+    background-color: #b10000;
+    border-color: #b10000;
+}
+
+.successBtn {
+    background-color: #015049;
+    border-color: #015049;
+}

@@ -1,10 +1,10 @@
 import { useContext, useState } from "react"
 import { TaskContext } from "./contexts/TaskContext"
-import Button from "./components/Button";
 import Form from "./components/Form";
+import TaskCard from "./components/TaskCard";
 
 function App() {
-  const { tasksArray, addTask, removeTask, toggleCheck } = useContext(TaskContext)
+  const { tasksArray } = useContext(TaskContext)
   const [filterOption, setFilterOption] = useState("all")
 
   const filteredTasks = tasksArray.filter((task) => {
@@ -19,8 +19,7 @@ function App() {
   })
 
   return (
-    <main>
-
+    <main className="main-container">
       <Form />
 
       <select
@@ -35,25 +34,14 @@ function App() {
       </select>
 
       <h1>Tasks</h1>
-      <ul style={{ listStyle: 'none' }}>
+      <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '2rem'}}>
         {filteredTasks.map(task => (
           <li key={task.id}>
-            {task.isFinished ?
-              <div>
-                <h1 style={{ textDecoration: 'line-through' }}>Nome: {task.name}</h1>
-                <p>Descricao: {task.description}</p>
-              </div>
-              :
-              <div>
-                <h1 style={{ textDecoration: 'none' }}>Nome: {task.name}</h1>
-                <p>Descricao: {task.description}</p>
-              </div>
-            }
-            <Button text="Remover" func={() => removeTask(task.id)} />
-            <Button func={() => toggleCheck(task.id)} text="Check" />
+            <TaskCard task={task} />
           </li>
         ))}
       </ul>
+
     </main>
   );
 }
