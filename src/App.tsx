@@ -2,6 +2,7 @@ import { useContext, useState } from "react"
 import { TaskContext } from "./contexts/TaskContext"
 import Form from "./components/Form";
 import TaskCard from "./components/TaskCard";
+import TasksList from "./components/TasksList";
 
 function App() {
   const { tasksArray } = useContext(TaskContext)
@@ -21,27 +22,17 @@ function App() {
   return (
     <main className="main-container">
       <Form />
-
       <select
         name="test"
         id="test"
         onChange={(e) => setFilterOption(e.target.value)}
         value={filterOption}
       >
-        <option value="all">All</option>
-        <option value="checked">Checked</option>
-        <option value="unchecked">Unchecked</option>
+        <option value="all">Ver Tudo</option>
+        <option value="checked">Concluídas</option>
+        <option value="unchecked">Pendentes</option>
       </select>
-
-      <h1>Tasks</h1>
-      <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '2rem'}}>
-        {filteredTasks.map(task => (
-          <li key={task.id}>
-            <TaskCard task={task} />
-          </li>
-        ))}
-      </ul>
-
+      <TasksList filteredTasks={filteredTasks} />
     </main>
   );
 }
