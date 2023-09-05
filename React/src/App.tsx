@@ -1,7 +1,6 @@
 import { useContext, useState } from "react"
 import { TaskContext } from "./contexts/TaskContext"
 import Form from "./components/Form";
-import TaskCard from "./components/TaskCard";
 import TasksList from "./components/TasksList";
 
 function App() {

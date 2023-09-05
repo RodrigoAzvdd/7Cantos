@@ -20,14 +20,14 @@ const Form = () => {
     return (
         <form className={styles.form}>
             <div className={styles.inputDiv}>
-                <label className={styles.label} htmlFor="name">Nome</label>
+                <label className={styles.label} htmlFor="name">Nome:</label>
                 <input className={styles.input} type="text" name="name" id="name" ref={nameInput} />
             </div>
             <div className={styles.inputDiv}>
-                <label className={styles.label} htmlFor="name">Descricao</label>
+                <label className={styles.label} htmlFor="name">Descrição:</label>
                 <input className={styles.input} type="text" name="name" id="name" ref={descriptionInput} />
             </div>
-            <Button  text="Add" func={() => handleClick()} />
+            <Button  text="Adicionar" func={() => handleClick()} />
         </form>
     )
 }

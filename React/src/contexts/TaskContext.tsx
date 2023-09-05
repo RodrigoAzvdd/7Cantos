@@ -31,7 +31,6 @@ export function TaskContextProvider({ children }: TaskContextProps) {
     }, [])
 
     const [tasksArray, setTasksArray] = useState<TaskType[]>([])
-    const [filteredTasks, setFilteredTasks] = useState<TaskType[]>([])
 
     const addTask = (name: string, description: string) => {
         if (name && description) {
@@ -70,11 +69,9 @@ export function TaskContextProvider({ children }: TaskContextProps) {
 
     const values = {
         tasksArray,
-        filteredTasks,
         addTask,
         removeTask,
         toggleCheck,
-        setFilteredTasks,
     }
 
     return (

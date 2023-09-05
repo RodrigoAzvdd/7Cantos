@@ -1,9 +1,24 @@
 .card {
     display: flex; 
     justify-content: space-between;
+    min-height: 7rem;
 }
 
 .btns {
     display: flex;
     gap: 2rem;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+    max-width: 50rem ;
+}
+
+@media(max-width: 950px) {
+    .card {
+        flex-direction: column;
+        gap: 2rem;
+    }
 }

@@ -20,3 +20,9 @@ select {
     font-weight: 600;
     border-radius: .3rem;
 }
+
+@media(max-width: 950px) {
+    .main-container {
+        padding: 5rem 2rem;
+    }
+}
