@@ -11,7 +11,9 @@ Bem-vindo ao projeto da Todo List da empresa 7Cantos! Este é um projeto de exem
 
 ## Visão Geral
 
-Este projeto é uma aplicação de lista de tarefas (Todo List) desenvolvida usando React, Vite e TypeScript. O objetivo é demonstrar minhas habilidades e conhecimentos como candidato à vaga de estágio na 7Cantos. A aplicação permite que os usuários criem, excluam e marquem tarefas como concluídas.
+Este projeto foi dividido em duas partes: React e Laravel. A explicação a seguir se concentra na parte React do projeto.
+
+(Todo List) desenvolvida usando React, Vite e TypeScript. O objetivo é demonstrar minhas habilidades e conhecimentos como candidato à vaga de estágio na 7Cantos. A aplicação permite que os usuários criem, excluam e marquem tarefas como concluídas.
 
 ## Funcionalidades
 
