@@ -1,4 +1,4 @@
-# Todo List - Estágio na 7Cantos
+# Todo List
 
 Bem-vindo ao projeto da Todo List da empresa 7Cantos! Este é um projeto de exemplo desenvolvido como parte do processo de seleção para a vaga de estágio na 7Cantos.
 
