@@ -5,8 +5,9 @@
 @section('content')
     <div class="container mt-5">
         <h1>Editando: {{ $jogos->nome }}</h1>
-        <form>
+        <form action="{{ route('jogos-update', ['id'=>$jogos->id]) }}" method="POST">
             @csrf
+            @method('PUT')
             <div class="form-group">
                 <div class="form-group">
                     <label for="nome">Nome:</label>
@@ -29,7 +30,7 @@
                 </div>
                 <br>
                 <div class="form-group">
-                    <input class="btn btn-success" type="submit" name="submit">
+                    <input class="btn btn-success" type="submit" name="submit" value="Atualizar">
                 </div>
             </div>
         </form>

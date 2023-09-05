@@ -25,7 +25,14 @@
               <td>{{$jogo->cartegoria}}</td>
               <td>{{$jogo->ano_criacao}}</td>
               <td>{{$jogo->valor}}</td>
-              <td><a href="{{ route('jogos-edit', ['id'=>$jogo->id]) }}" class="btn btn-primary">Editar</a><td>
+              <td class="d-flex gap-1">
+                <a href="{{ route('jogos-edit', ['id'=>$jogo->id]) }}" class="btn btn-primary btn-sm">Editar</a>
+                <form action="{{ route('jogos-destroy', ['id'=>$jogo->id])}}" method="POST">
+                  @csrf
+                  @method('delete')
+                  <button type="submit" class="btn btn-danger btn-sm">Deletar</button>
+                </form>
+              <td>
             </tr>
             @endforeach
           </tbody>

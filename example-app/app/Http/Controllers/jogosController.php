@@ -30,7 +30,24 @@ class jogosController extends Controller
         if (empty($jogos)) {
             return redirect()->route('jogos-index');
         } else {
-            return view('jogos.edit', ['jogos'=>$jogos]);
+            return view('jogos.edit', ['jogos' => $jogos]);
         }
+    }
+
+    public function update(Request $request, $id)
+    {
+        $data = [
+            'nome' => $request->nome,
+            'cartegoria' => $request->cartegoria,
+            'ano_criacao' => $request->ano_criacao,
+            'valor' => $request->valor
+        ];
+        Jogo::where('id', $id)->update($data);
+        return redirect()->route('jogos-index');
+    }
+
+    public function destroy($id) {
+        Jogo::where('id', $id)->delete();
+        return redirect()->route('jogos-index');
     }
 }
