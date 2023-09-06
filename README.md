@@ -10,7 +10,7 @@ Este é o projeto baseado em Laravel, onde desenvolvi um sistema CRUD (Create, R
 ## Projeto React - CRUD
 **Localização**: `React/`
 
-O projeto React é uma implementação de um sistema CRUD independente. Ele permite a criação, leitura, atualização e exclusão de dados de forma eficiente. Neste diretório `React/`, você encontrará os arquivos React, componentes e rotas necessários para executar este projeto.
+O projeto React é uma implementação de um sistema CRUD independente. Ele permite a criação, leitura, atualização e exclusão de dados de forma eficiente. Neste diretório `React/`, você encontrará os arquivos React, componentes e Contextos necessários para executar este projeto.
 
 ## Projeto React + Laravel - CRUD com API
 **Localização**: `React+Laravel/`
