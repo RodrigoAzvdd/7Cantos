@@ -1,27 +1,53 @@
-# React + TypeScript + Vite
+# Meu Projeto React
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este projeto foi criado usando Vite + TypeScript e consiste em uma aplicação de gerenciamento de tarefas. Ele utiliza um Context chamado TaskContext para armazenar e manipular as tarefas.
 
-Currently, two official plugins are available:
+## Funcionalidades
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Adicionar uma tarefa
+- Remover uma tarefa
+- Armazenar as tarefas em um estado usando useState
+- Utilizar o localStorage para simular um backend
+- Cada tarefa possui os atributos: name, description, id e isFinished (para saber se a tarefa foi finalizada)
 
-## Expanding the ESLint configuration
+## Componentes
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+### Button
 
-- Configure the top-level `parserOptions` property like this:
+Este componente recebe as seguintes props:
+- color: cor do botão
+- text: texto do botão
+- func: função que será acionada pelo evento onClick do botão
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
+### Form
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+Este componente utiliza o contexto TaskContext para receber a função de adicionar uma tarefa. Ele utiliza inputs para que o usuário possa criar uma nova tarefa e passá-la para a função.
+
+### TaskList
+
+Este componente recebe a seguinte prop:
+- tasks: array de tarefas que será utilizada para listar todas as tarefas em uma lista <ul>. Cada tarefa é renderizada como um componente TaskCard.
+
+### TaskCard
+
+Este componente recebe a seguinte prop:
+- task: uma tarefa que será renderizada com seus respectivos valores (name e description)
+
+Cada componente foi criado em pastas separadas e possui seu respectivo arquivo style.module.css para estilização.
+
+## Arquivo App.tsx
+
+No arquivo App.tsx, foram realizadas as seguintes ações:
+- Utilização do contexto para receber a array de tarefas
+- Criação de um estado com useState para armazenar o valor do select que será retornado pelo App
+- Criação da variável 'filteredTasks' que filtra a array de tarefas com base no status de isFinished, retornando uma array filtrada
+- O componente App.tsx retorna:
+  - O componente <Form />
+  - Um select que, com o evento onChange, altera o valor de filterOption
+  - O componente TaskList, que recebe a array filteredTasks
+
+## Executando o projeto
+
+Para executar o projeto, siga os passos abaixo:
+1. Execute o comando `npm install` para instalar as dependências
+2. Execute o comando `npm run dev` para iniciar o projeto
