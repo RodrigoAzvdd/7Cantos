@@ -2,17 +2,17 @@
 
 Bem-vindo ao meu projeto de estágio na empresa 7Cantos! Neste repositório, você encontrará três projetos distintos que desenvolvi durante o meu estágio. Cada projeto possui sua própria pasta e é detalhado abaixo:
 
-## Projeto Laravel - CRUD
+## Projeto Laravel - Gerenciador de Tarefas
 **Localização**: `laravel-7cantos/`
 
 Este é o projeto baseado em Laravel, onde desenvolvi um sistema CRUD (Create, Read, Update, Delete) completo. Ele é responsável por gerenciar dados em um banco de dados e possui uma interface web para interagir com esses dados. No diretório `laravel-7cantos/`, você encontrará todo o código relacionado a este projeto, incluindo os modelos, controladores, visualizações e as migrações do banco de dados.
 
-## Projeto React - CRUD
+## Projeto React - Gerenciador de Tarefas
 **Localização**: `React/`
 
 O projeto React é uma implementação de um sistema CRUD independente. Ele permite a criação, leitura, atualização e exclusão de dados de forma eficiente. Neste diretório `React/`, você encontrará os arquivos React, componentes e Contextos necessários para executar este projeto.
 
-## Projeto React + Laravel - CRUD com API
+## Projeto React + Laravel - Gerenciador de Tarefa com API
 **Localização**: `React+Laravel/`
 
 Este projeto é uma integração entre o Laravel e o React, onde criei uma API com Laravel e usei o React para criar uma interface de usuário amigável que se comunica com essa API. Isso proporciona uma experiência de usuário mais dinâmica e interativa. No diretório `React+Laravel/`, você encontrará tanto o código Laravel responsável pela API quanto o código React responsável pela interface do usuário.
