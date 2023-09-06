@@ -85,10 +85,3 @@ Isso iniciará o aplicativo e estará acessível em http://localhost:3000.
 ### Interface com Tailwind CSS
 
 - Utilizei o framework de design Tailwind CSS junto com as views do Laravel para proporcionar uma experiência de interação amigável com o usuário.
-
-
-
-
-
-
-
