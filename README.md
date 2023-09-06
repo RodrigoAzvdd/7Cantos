@@ -1,94 +1,27 @@
-# Todo List
+# Projeto de Estágio na 7Cantos
 
-Bem-vindo ao projeto da Todo List da empresa 7Cantos! Este é um projeto de exemplo desenvolvido como parte do processo de seleção para a vaga de estágio na 7Cantos.
+Bem-vindo ao meu projeto de estágio na empresa 7Cantos! Neste repositório, você encontrará três projetos distintos que desenvolvi durante o meu estágio. Cada projeto possui sua própria pasta e é detalhado abaixo:
 
-## Conteúdo
+## Projeto Laravel - CRUD
+**Localização**: `laravel-7cantos/`
 
-- [Visão Geral](#visão-geral)
-- [Funcionalidades](#funcionalidades)
-- [Instalação](#instalação)
-- [Executando o Projeto](#executando-o-projeto)
+Este é o projeto baseado em Laravel, onde desenvolvi um sistema CRUD (Create, Read, Update, Delete) completo. Ele é responsável por gerenciar dados em um banco de dados e possui uma interface web para interagir com esses dados. No diretório `laravel-7cantos/`, você encontrará todo o código relacionado a este projeto, incluindo os modelos, controladores, visualizações e as migrações do banco de dados.
 
-## Visão Geral
+## Projeto React - CRUD
+**Localização**: `React/`
 
-Este projeto foi dividido em duas partes: React e Laravel. A explicação a seguir se concentra na parte React do projeto.
+O projeto React é uma implementação de um sistema CRUD independente. Ele permite a criação, leitura, atualização e exclusão de dados de forma eficiente. Neste diretório `React/`, você encontrará os arquivos React, componentes e rotas necessários para executar este projeto.
 
-(Todo List) desenvolvida usando React, Vite e TypeScript. O objetivo é demonstrar minhas habilidades e conhecimentos como candidato à vaga de estágio na 7Cantos. A aplicação permite que os usuários criem, excluam e marquem tarefas como concluídas.
+## Projeto React + Laravel - CRUD com API
+**Localização**: `React+Laravel/`
 
-## Funcionalidades
+Este projeto é uma integração entre o Laravel e o React, onde criei uma API com Laravel e usei o React para criar uma interface de usuário amigável que se comunica com essa API. Isso proporciona uma experiência de usuário mais dinâmica e interativa. No diretório `React+Laravel/`, você encontrará tanto o código Laravel responsável pela API quanto o código React responsável pela interface do usuário.
 
-- **TaskContext**: O contexto TaskContext gerencia tarefas e fornece funções para adicionar, remover e marcar tarefas como concluídas. Além disso, utiliza o Local Storage para persistência de valores.
+## Como executar os projetos
+Cada pasta do projeto possui seu próprio arquivo README.md com instruções detalhadas sobre como executar e configurar o projeto correspondente. Certifique-se de verificar o arquivo README.md dentro de cada pasta para obter informações específicas de configuração e execução.
 
-- **Componentes**:
-  - `Button`: Um componente reutilizável que recebe texto, função e cor como props e é usado para renderizar botões em vários lugares do aplicativo.
-  - `Form`: Permite adicionar uma nova tarefa com base nos valores inseridos no formulário.
-  - `TaskCard`: Renderiza tarefas individuais, permitindo a remoção e marcação de tarefas como concluídas.
-  - `TaskList`: Exibe uma lista de tarefas com opções de filtragem (todas, concluídas ou não concluídas).
+##
 
-- **App.tsx**: Utiliza o contexto TaskContext para gerenciar as tarefas e exibi-las na interface do usuário. Ele inclui um estado para armazenar as tarefas filtradas com base em seu estado de conclusão.
+Agradeço pela oportunidade de trabalhar na 7Cantos e estou animado para compartilhar esses projetos com você. Se você tiver alguma dúvida ou precisar de assistência, não hesite em entrar em contato comigo.
 
-## Instalação
-
-Para começar, siga os passos abaixo:
-
-1. Clone este repositório:
-
-    ```bash
-    git clone https://github.com/RodrigoAzvdd/7Cantos.git
-    cd seu-projeto
-2. Instale as dependências:
-
-    ```bash
-   npm install
-
-## Executando o Projeto
-
-Após a instalação, você pode iniciar o servidor de desenvolvimento local:
-
-    npm run dev
-
-Isso iniciará o aplicativo e estará acessível em http://localhost:3000.
-
-
-# CRUD com Laravel
-
-### Configuração Inicial
-
-- Criei a aplicação Laravel com `composer create-project laravel/laravel laravel-7cantos`.
-- Configurei o meu Banco de Dados (MySQL) com o arquivo `.env` do Laravel.
-
-### Rotas e Controladores
-
-- Na pasta `routes/web.php`, criei rotas para o CRUD, utilizando métodos para criação, atualização, leitura e exclusão de dados.
-
-### Model e Controller
-
-- Criei um Model de tarefas com os seguintes campos: `title`, `description` e `author`.
-- Desenvolvi um Controller com os seguintes métodos:
-
-#### `index`
-
-- Responsável por listar as tarefas.
-
-#### `store`
-
-- Utilizado para criar uma nova tarefa a partir dos valores preenchidos pelo usuário no formulário e enviá-la para o banco de dados.
-
-#### `update`
-
-- Este método busca uma tarefa por meio de um ID passado por parâmetro, atualiza seus dados com base em um formulário e envia os dados atualizados para o banco de dados.
-
-#### `delete`
-
-- Responsável por buscar uma tarefa por meio de um ID passado por parâmetro e deletar essa tarefa do banco de dados.
-
-### Interface com Tailwind CSS
-
-- Utilizei o framework de design Tailwind CSS junto com as views do Laravel para proporcionar uma experiência de interação amigável com o usuário.
-
-
-
-
-
-
-
+Obrigado!
