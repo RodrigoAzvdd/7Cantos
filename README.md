@@ -1,6 +1,6 @@
 # Projeto de Estágio na 7Cantos
 
-Bem-vindo ao meu projeto de estágio na empresa 7Cantos! Neste repositório, você encontrará três projetos distintos que desenvolvi durante o meu estágio. Cada projeto possui sua própria pasta e é detalhado abaixo:
+Bem-vindo ao meu projeto de estágio na empresa 7Cantos! Neste repositório, você encontrará três projetos distintos que desenvolvi. Cada projeto possui sua própria pasta e é detalhado abaixo:
 
 ## Projeto Laravel - Gerenciador de Tarefas
 **Localização**: `laravel-7cantos/`
