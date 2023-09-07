@@ -98,3 +98,48 @@ Acessei os endpoints da API para realizar operações CRUD nas tarefas. Por exem
 - PUT /api/tasks/{id}: atualiza uma tarefa existente
 - DELETE /api/tasks/{id}: exclui uma tarefa
 
+## Interface React
+
+O React deste projeto é responsável pela interface do usuário e pela interação com a API Laravel para gerenciar tarefas. Aqui estão os detalhes sobre como criei s Interface React:
+
+### Custom Hook `UseTask.js`
+
+Criei um hook personalizado chamado `UseTask.js`, que é responsável por gerenciar os métodos CRUD para as tarefas. Esse hook fornece as seguintes funcionalidades:
+
+- `tasks`: Retorna um array de tarefas.
+- Retorno de funções CRUD:
+  - `addTask`: Adiciona uma nova tarefa.
+  - `removeTask`: Remove uma tarefa.
+  - `updateTask`: Atualiza uma tarefa.
+  - `findTask`: Retorna uma tarefa específica.
+
+### Gerenciamento de Requisições com Axios
+
+Instalei a biblioteca Axios via npm para fazer requisições HTTP à API Laravel. Utilizei o Axios para realizar operações de GET, PUT, POST e DELETE nas tarefas.
+
+### Páginas
+
+Criei várias páginas React para gerenciar as tarefas:
+
+#### 1. CreateTask
+
+Esta página é responsável por coletar os dados do formulário e passá-los como parâmetro para a função `addTask`, criando uma nova tarefa.
+
+#### 2. EditTask
+
+A página `EditTask` possui uma rota dinâmica e é responsável por coletar os dados do formulário e atualizar a tarefa, passando os dados e o ID da tarefa como parâmetro da função `updateTask`.
+
+#### 3. Dashboard
+
+A página `Dashboard` é responsável por listar as tarefas em uma tabela. Cada linha da tabela exibe informações sobre a tarefa, incluindo ID, título, descrição, responsável e ações disponíveis.
+
+As ações disponíveis em cada linha da tabela são:
+
+- Editar: Redireciona o usuário para a rota da página `EditTask`, permitindo a edição da tarefa.
+- Deletar: Deleta a tarefa por meio da função `removeTask`.
+
+### Estilização
+
+Para a estilização da Interface React, utilizei o framework Tailwind CSS para criar uma interface de usuário moderna e responsiva.
+
+O React trabalha em conjunto com a API Laravel para fornecer uma experiência completa de gerenciamento de tarefas.
