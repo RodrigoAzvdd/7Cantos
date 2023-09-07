@@ -26,6 +26,7 @@ class TaskController extends Controller
         $task->title = $request->title;
         $task->description = $request->description;
         $task->author = $request->author;
+        $task->completed = false;
         $task->save();
 
         return response()->json($task);
