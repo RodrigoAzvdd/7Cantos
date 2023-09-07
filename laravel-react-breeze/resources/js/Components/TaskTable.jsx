@@ -24,12 +24,12 @@ export default function TaskTable() {
                     </tr>
                 ) : (
                     tasks.map(task => (
-                        <tr key={task.id}>
-                            <td className="px-6 py-4 whitespace-nowrap bg-white text-black">{task.id}</td>
-                            <td className="px-6 py-4 whitespace-nowrap bg-white text-black">{task.title}</td>
-                            <td className="px-6 py-4 whitespace-nowrap bg-white text-black">{task.description}</td>
-                            <td className="px-6 py-4 whitespace-nowrap bg-white text-black">{task.author}</td>
-                            <td className="px-6 py-4 whitespace-nowrap bg-white text-black flex gap-3">
+                        <tr>
+                            <td className={`px-6 py-4 whitespace-nowrap bg-white text-black`}>{task.id}</td>
+                            <td className={`px-6 py-4 whitespace-nowrap bg-white text-black`}>{task.title}</td>
+                            <td className={`px-6 py-4 whitespace-nowrap bg-white text-black`}>{task.description}</td>
+                            <td className={`px-6 py-4 whitespace-nowrap bg-white text-black`}>{task.author}</td>
+                            <td className={`px-6 py-4 whitespace-nowrap bg-white text-black flex gap-3`}>
                                 <Link
                                     href={route('editTask', { taskId: task.id })}
                                     className="px-2 py-1 bg-blue-500 rounded-sm hover:scale-110 transition text-sm text-white"
