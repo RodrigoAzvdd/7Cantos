@@ -2,6 +2,11 @@
 
 Bem-vindo ao meu projeto de estágio na empresa 7Cantos! Neste repositório, você encontrará três projetos distintos que desenvolvi. Cada projeto possui sua própria pasta e é detalhado abaixo:
 
+## Projeto React + Laravel - Gerenciador de Tarefa com API
+**Localização**: `laravel-react-breeze/`
+
+Este projeto é uma integração entre o Laravel e o React, onde criei uma API com Laravel e usei o React para criar uma interface de usuário amigável que se comunica com essa API. Isso proporciona uma experiência de usuário mais dinâmica e interativa. No diretório `laravel-react-breeze/`, você encontrará tanto o código Laravel responsável pela API quanto o código React responsável pela interface do usuário.
+
 ## Projeto Laravel - Gerenciador de Tarefas
 **Localização**: `laravel-7cantos/`
 
@@ -11,11 +16,6 @@ Este é o projeto baseado em Laravel, onde desenvolvi um sistema CRUD (Create, R
 **Localização**: `React/`
 
 O projeto React é uma implementação de um sistema CRUD independente. Ele permite a criação, leitura, atualização e exclusão de dados de forma eficiente. Neste diretório `React/`, você encontrará os arquivos React, componentes e Contextos necessários para executar este projeto.
-
-## Projeto React + Laravel - Gerenciador de Tarefa com API
-**Localização**: `laravel-react-breeze/`
-
-Este projeto é uma integração entre o Laravel e o React, onde criei uma API com Laravel e usei o React para criar uma interface de usuário amigável que se comunica com essa API. Isso proporciona uma experiência de usuário mais dinâmica e interativa. No diretório `laravel-react-breeze/`, você encontrará tanto o código Laravel responsável pela API quanto o código React responsável pela interface do usuário.
 
 ## Como executar os projetos
 Cada pasta do projeto possui seu próprio arquivo README.md com instruções detalhadas sobre como executar e configurar o projeto correspondente. Certifique-se de verificar o arquivo README.md dentro de cada pasta para obter informações específicas de configuração e execução.
