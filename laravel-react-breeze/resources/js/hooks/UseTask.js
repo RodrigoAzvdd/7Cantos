@@ -4,20 +4,31 @@ import { useEffect, useState } from 'react'
 export default function UseTask() {
     const [tasks, setTasks] = useState([])
     const apiUrl = 'http://127.0.0.1:8000/api/tasks/'
+    const [filteredTasks, setFilteredTasks] = useState(tasks)
+    const [filterOption, setFilterOption] = useState('all')
+
 
     useEffect(() => {
         updateTasks()
     }, [])
 
+    useEffect(() => {
+        setFilteredTasks(tasks)
+    }, [tasks])
+
     const updateTasks = async () => {
         try {
-            const response = await axios.get(apiUrl);
-            setTasks(response.data);
+            const response = await axios.get(apiUrl)
+            setTasks(response.data)
         } catch (error) {
-            console.error('Erro ao buscar tarefas:', error);
-            throw error;
+            console.error('Erro ao buscar tarefas:', error)
+            throw error
         }
     }
+
+    const filterTasksByStatus = (status) => {
+        setFilterOption(status)
+    }    
 
     const addTask = async (title, description, author) => {
         const newTask = {
@@ -30,6 +41,7 @@ export default function UseTask() {
             await axios.post(apiUrl, newTask)
             console.log('Tarefa criada com sucesso')
             updateTasks()
+            filterTasksByStatus(filterOption)
         } catch (error) {
             console.log('Erro ao criar tarefa: ', error)
         }
@@ -37,11 +49,11 @@ export default function UseTask() {
 
     const removeTask = async (taskId) => {
         try {
-            await axios.delete(`${apiUrl}${taskId}`);
-            console.log('Tarefa excluída com sucesso');
-            updateTasks();
+            await axios.delete(`${apiUrl}${taskId}`)
+            console.log('Tarefa excluída com sucesso')
+            updateTasks()
         } catch (error) {
-            console.log('Erro ao excluir tarefa: ', error);
+            console.log('Erro ao excluir tarefa: ', error)
         }
     }
 
@@ -64,25 +76,36 @@ export default function UseTask() {
 
     const findTask = async (taskId) => {
         try {
-            const response = await axios.get(`${apiUrl}${taskId}`);
-            console.log('Tarefas encontrada com sucesso');
+            const response = await axios.get(`${apiUrl}${taskId}`)
+            console.log('Tarefas encontrada com sucesso')
             return response.data
         } catch (error) {
-            console.error('Erro ao buscar tarefa:', error);
+            console.error('Erro ao buscar tarefa:', error)
             throw error;
         }
     }
 
     const updateStatus = async (taskId) => {
         try {
-            const response = await axios.put(`${apiUrl}${taskId}/complete`);
-            console.log('Status atualizado com sucesso');
+            const response = await axios.put(`${apiUrl}${taskId}/complete`)
+            console.log('Status atualizado com sucesso')
             return response.data
         } catch (error) {
-            console.error('Erro ao atualizar status da tarefa:', error);
+            console.error('Erro ao atualizar status da tarefa:', error)
             throw error;
         }
     }
 
-    return { tasks, addTask, removeTask, updateTasks, updateTask, findTask, updateStatus }
+    return {
+        tasks,
+        addTask,
+        removeTask,
+        updateTasks,
+        updateTask,
+        findTask,
+        updateStatus,
+        filteredTasks,
+        filterTasksByStatus,
+        filterOption
+    }
 }
