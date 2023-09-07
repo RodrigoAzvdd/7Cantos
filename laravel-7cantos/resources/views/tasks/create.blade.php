@@ -13,7 +13,7 @@
                 <label class="block text-gray-700 text-sm font-bold mb-2" for="title">
                     Título:
                 </label>
-                <input
+                <input required
                     class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                     id="title" name="title" type="text" placeholder="Título">
             </div>
@@ -21,7 +21,7 @@
                 <label class="block text-gray-700 text-sm font-bold mb-2" for="description">
                     Descrição:
                 </label>
-                <input
+                <input required
                     class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                     id="description" name="description" type="text" placeholder="Descrição">
             </div>
@@ -29,7 +29,7 @@
                 <label class="block text-gray-700 text-sm font-bold mb-2" for="author">
                     Responsável:
                 </label>
-                <input
+                <input required
                     class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                     type="text" id="author" name="author" placeholder="Ex: Rodrigo Azevedo">
             </div>

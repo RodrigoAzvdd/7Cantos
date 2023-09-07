@@ -3,6 +3,7 @@
 use App\Http\Controllers\taskController;
 use Illuminate\Support\Facades\Route;
 
+Route::redirect('/', '/tasks');
 
 Route::prefix('tasks')->group(function() {
     Route::get('/', [taskController::class, 'index'])->name('tasks-index');
