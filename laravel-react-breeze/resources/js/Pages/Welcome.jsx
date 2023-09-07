@@ -3,7 +3,7 @@ import { Link, Head } from '@inertiajs/react';
 export default function Welcome({ auth, laravelVersion, phpVersion }) {
     return (
         <>
-            <Head title="Welcome" />
+            <Head title="Inicio" />
             <div className="flex flex-col justify-center items-center min-h-screen bg-dots-darker bg-center bg-gray-100 selection:text-white">
                 <h1 className='text-6xl  text-black'>Gerenciador de Tarefas</h1>
                 <div className="p-6 text-right">
