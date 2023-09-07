@@ -138,6 +138,20 @@ As ações disponíveis em cada linha da tabela são:
 - Editar: Redireciona o usuário para a rota da página `EditTask`, permitindo a edição da tarefa.
 - Deletar: Deleta a tarefa por meio da função `removeTask`.
 
+### Componentes
+
+#### TaskTable
+
+O componente `TaskTable` é responsável por exibir uma tabela que lista todas as tarefas cadastradas pelo usuário. Ele não recebe as tarefas como uma prop, mas sim obtém os dados diretamente do hook personalizado `UseTask`.
+
+### Funcionalidades - TaskTable
+
+- Renderiza uma tabela de tarefas.
+- Exibe informações de cada tarefa, incluindo ID, título, descrição, responsável e ações disponíveis.
+- Fornece ações para cada tarefa:
+  - **Editar**: Permite ao usuário editar a tarefa, geralmente redirecionando para a página de edição correspondente.
+  - **Deletar**: Permite ao usuário excluir a tarefa, acionando a função `removeTask` do hook `UseTask`.
+
 ### Estilização
 
 Para a estilização da Interface React, utilizei o framework Tailwind CSS para criar uma interface de usuário moderna e responsiva.
