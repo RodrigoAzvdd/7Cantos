@@ -2,8 +2,8 @@
 
 Bem-vindo ao meu projeto de estágio na empresa 7Cantos! Neste repositório, você encontrará três projetos distintos que desenvolvi. Cada projeto possui sua própria pasta e é detalhado abaixo:
 
-## Projeto React + Laravel - Gerenciador de Tarefa com API
-**Localização**: `laravel-react-breeze/`
+# Projeto Principal React + Laravel - Gerenciador de Tarefa com API
+## Localização: `laravel-react-breeze/`
 
 Este projeto é uma integração entre o Laravel e o React, onde criei uma API com Laravel e usei o React para criar uma interface de usuário amigável que se comunica com essa API. Isso proporciona uma experiência de usuário mais dinâmica e interativa. No diretório `laravel-react-breeze/`, você encontrará tanto o código Laravel responsável pela API quanto o código React responsável pela interface do usuário.
 
