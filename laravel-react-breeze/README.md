@@ -112,6 +112,7 @@ Criei um hook personalizado chamado `UseTask.js`, que é responsável por gerenc
   - `removeTask`: Remove uma tarefa.
   - `updateTask`: Atualiza uma tarefa.
   - `findTask`: Retorna uma tarefa específica.
+  - `changeStatus`: Atualiza o status de uma tarefa específica.
 
 ### Gerenciamento de Requisições com Axios
 
@@ -151,6 +152,7 @@ O componente `TaskTable` é responsável por exibir uma tabela que lista todas a
 - Fornece ações para cada tarefa:
   - **Editar**: Permite ao usuário editar a tarefa, geralmente redirecionando para a página de edição correspondente.
   - **Deletar**: Permite ao usuário excluir a tarefa, acionando a função `removeTask` do hook `UseTask`.
+  - **Marcar como concluída**: Permite ao usuário alterar o status da tarefa, acionando a função `changeStatus` do hook `UseTask`.
 
 ### Estilização
 
