@@ -19,4 +19,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
+Route::put('/tasks/{id}/complete', [TaskController::class, 'completeTask'])->name('tasks.complete');
+
 Route::apiResource('tasks', TaskController::class);

@@ -5,6 +5,10 @@ export default function UseTask() {
     const [tasks, setTasks] = useState([])
     const apiUrl = 'http://127.0.0.1:8000/api/tasks/'
 
+    useEffect(() => {
+        updateTasks()
+    }, [])
+
     const updateTasks = async () => {
         try {
             const response = await axios.get(apiUrl);
@@ -14,11 +18,6 @@ export default function UseTask() {
             throw error;
         }
     }
-
-
-    useEffect(() => {
-        updateTasks()
-    }, [])
 
     const addTask = async (title, description, author) => {
         const newTask = {
@@ -74,5 +73,16 @@ export default function UseTask() {
         }
     }
 
-    return { tasks, addTask, removeTask, updateTasks, updateTask, findTask }
+    const updateStatus = async (taskId) => {
+        try {
+            const response = await axios.put(`${apiUrl}${taskId}/complete`);
+            console.log('Status atualizado com sucesso');
+            return response.data
+        } catch (error) {
+            console.error('Erro ao atualizar status da tarefa:', error);
+            throw error;
+        }
+    }
+
+    return { tasks, addTask, removeTask, updateTasks, updateTask, findTask, updateStatus }
 }

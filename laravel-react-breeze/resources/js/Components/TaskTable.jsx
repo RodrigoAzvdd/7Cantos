@@ -4,7 +4,7 @@ import { useEffect } from "react";
 
 export default function TaskTable() {
 
-    const { removeTask, updateTasks, tasks } = UseTask()
+    const { removeTask, updateTasks, updateStatus, tasks } = UseTask()
 
     return (
         <table className="min-w-full divide-gray-200 px-10">
@@ -46,6 +46,17 @@ export default function TaskTable() {
                                     }
                                 >
                                     Deletar
+                                </button>
+                                <button
+                                    type="button"
+                                    className={`px-2 py-1 rounded-sm hover:scale-110 transition text-sm text-white ${task.completed == false ? 'bg-purple-600' : 'bg-green-400'}`}
+                                    onClick={() => {
+                                        updateStatus(task.id)
+                                        updateTasks()
+                                    }
+                                    }
+                                >
+                                    {task.completed == false ? 'Marcar como concluída' : 'Concluída'}
                                 </button>
                             </td>
                         </tr>
