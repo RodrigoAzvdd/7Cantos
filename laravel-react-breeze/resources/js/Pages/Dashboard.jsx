@@ -20,7 +20,7 @@ export default function Dashboard({ auth }) {
             <Head title="Tarefas" />
 
             <div className="py-12">
-                <div className="max-w-7xl mx-auto sm:px-6 px-2">
+                <div className="mx-auto px-28">
                     <div className="bg-white overflow-hidden shadow-sm sm:rounded-lg px-10">
                         <div className='flex justify-between items-center py-6'>
                             <div className="text-gray-900 text-lg">Lista de Tarefas</div>
