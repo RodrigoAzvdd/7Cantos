@@ -1,5 +1,8 @@
 # Projeto React + Laravel com Autenticação Breeze
 
+## Video Projeto:
+https://github.com/RodrigoAzvdd/7Cantos/assets/103541108/63ff16b6-8ede-4138-a02f-cc6871f15959
+
 ## Imagens do Projeto:
 ### Página Inicial:
 ![firstPage](https://github.com/RodrigoAzvdd/7Cantos/assets/103541108/9c39b6fc-6857-444d-a72d-7f3660a52505)
