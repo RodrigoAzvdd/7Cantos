@@ -116,7 +116,7 @@ Acessei os endpoints da API para realizar operações CRUD nas tarefas. Por exem
 - PUT /api/tasks/{id}: atualiza uma tarefa existente
 - DELETE /api/tasks/{id}: exclui uma tarefa
 
-## Interface React
+# Interface React
 
 O React deste projeto é responsável pela interface do usuário e pela interação com a API Laravel para gerenciar tarefas. Aqui estão os detalhes sobre como criei s Interface React:
 
