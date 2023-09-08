@@ -15,6 +15,8 @@
 ![EditPage](https://github.com/RodrigoAzvdd/7Cantos/assets/103541108/405fbcf5-91ce-4a0c-9009-2a231b8ad0ba)
 ### Página do Usuário:
 ![ProfilePage](https://github.com/RodrigoAzvdd/7Cantos/assets/103541108/9581bcf3-0df9-4fb0-91b4-895e8a05d4f7)
+### Banco de Dado MySQL:
+![DataBase](https://github.com/RodrigoAzvdd/7Cantos/assets/103541108/5330e455-e9e5-4f10-be0e-e9b3ade55f9f)
 
 Neste README, descreverei como executei a criação do projeto React + Laravel com autenticação Breeze, passo a passo.
 
