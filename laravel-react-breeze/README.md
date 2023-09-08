@@ -1,5 +1,26 @@
 # Projeto React + Laravel com Autenticação Breeze
 
+## Video Projeto:
+https://github.com/RodrigoAzvdd/7Cantos/assets/103541108/63ff16b6-8ede-4138-a02f-cc6871f15959
+
+## Imagens do Projeto:
+### Página Inicial:
+![firstPage](https://github.com/RodrigoAzvdd/7Cantos/assets/103541108/9c39b6fc-6857-444d-a72d-7f3660a52505)
+### Página de Cadastro:
+![LoginPage](https://github.com/RodrigoAzvdd/7Cantos/assets/103541108/eaa5ebe4-8270-4e6c-a532-b6e50285041b)
+### Página de Login:
+![RealLoginPage](https://github.com/RodrigoAzvdd/7Cantos/assets/103541108/17f9d703-257a-4edd-8874-a0e5a8d7c140)
+### Dashboard:
+![DashboardNoItems](https://github.com/RodrigoAzvdd/7Cantos/assets/103541108/0ac653ab-59d0-4c30-8286-1cf89dd9431c)
+![DashboardItems](https://github.com/RodrigoAzvdd/7Cantos/assets/103541108/4cae0ca3-f3f0-435d-8531-3aea2fc8d9f8)
+### Páginas Nova/Editar Tarefa:
+![CreatePage](https://github.com/RodrigoAzvdd/7Cantos/assets/103541108/35fa47e3-44a8-4272-bca9-14724329b895)
+![EditPage](https://github.com/RodrigoAzvdd/7Cantos/assets/103541108/405fbcf5-91ce-4a0c-9009-2a231b8ad0ba)
+### Página do Usuário:
+![ProfilePage](https://github.com/RodrigoAzvdd/7Cantos/assets/103541108/9581bcf3-0df9-4fb0-91b4-895e8a05d4f7)
+### Banco de Dado MySQL:
+![DataBase](https://github.com/RodrigoAzvdd/7Cantos/assets/103541108/5330e455-e9e5-4f10-be0e-e9b3ade55f9f)
+
 Neste README, descreverei como executei a criação do projeto React + Laravel com autenticação Breeze, passo a passo.
 
 ## Configuração Inicial
@@ -98,7 +119,7 @@ Acessei os endpoints da API para realizar operações CRUD nas tarefas. Por exem
 - PUT /api/tasks/{id}: atualiza uma tarefa existente
 - DELETE /api/tasks/{id}: exclui uma tarefa
 
-## Interface React
+# Interface React
 
 O React deste projeto é responsável pela interface do usuário e pela interação com a API Laravel para gerenciar tarefas. Aqui estão os detalhes sobre como criei s Interface React:
 
