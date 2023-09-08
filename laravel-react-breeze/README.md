@@ -121,7 +121,7 @@ Acessei os endpoints da API para realizar operações CRUD nas tarefas. Por exem
 
 # Interface React
 
-O React deste projeto é responsável pela interface do usuário e pela interação com a API Laravel para gerenciar tarefas. Aqui estão os detalhes sobre como criei s Interface React:
+O React deste projeto é responsável pela interface do usuário e pela interação com a API Laravel para gerenciar tarefas. Aqui estão os detalhes sobre como criei a Interface React:
 
 ### Custom Hook `UseTask.js`
 
